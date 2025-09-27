@@ -1,0 +1,84 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %} Dashboard{% endblock title %}
+
+{% block top-nav %} 
+<!--Topside-->
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        Information
+                    </div>
+                    <div class="card-body">
+                        <marquee behavior="" direction="">
+                            <h3 class="my-4">This is the Information</h3>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        Statistics
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="text-decoration-none text-dark" href="{% url 'staff' %}">
+                                    <div class="card my-card shadow text-center p-3">
+                                        <h4>Staff <i class="fas fa-users"></i></h4>
+                                        <h3>{{worker_count}}</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <a class="text-decoration-none text-dark" href="{% url 'all_order' %}">
+                                    <div class="card my-card shadow text-center p-3">
+                                        <h4>Orders <i class="fas fa-shipping-fast"></i></h4>
+                                        <h3>{{orders_count}}</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock top-nav %}
+
+{% block main-content %}
+    <!--Table-->
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <table class="table bg-white">
+                    <thead class="bg-info">
+                        <tr class="text-white">
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for worker in workers %}
+                        <tr>
+                            <th scope="row"><a class="btn btn-info btn-sm" href="{% url 'dashboard-staff-detail' worker.id %}">View</a></th>
+                            <td>{{worker.username}}</td>
+                            <td>{{worker.email}}</td>
+                            <td>{{worker.profile.phone}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!--End Table-->
+{% endblock main-content %}
