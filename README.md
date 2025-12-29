@@ -2,9 +2,7 @@
 
 A responsive Point of Sale (POS) dashboard designed for administrative use, providing real-time insights into staff activity and order statistics.
 
-## 🖼️ Screenshot
-
-![POS Dashboard Screenshot](.\admin dashboard.png)
+## 🖼️ Screenshot ![Website Screenshot](./admin dashboard.png)
 
 ## 🚀 Features
 
@@ -26,4 +24,9 @@ A responsive Point of Sale (POS) dashboard designed for administrative use, prov
    ```bash
    git clone https://github.com/yourusername/pos-dashboard.git
    cd pos-dashboard
-2. 
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. Run the server
+   ```bash
+   python manage.py runserver
