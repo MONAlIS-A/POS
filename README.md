@@ -22,8 +22,8 @@ A responsive Point of Sale (POS) dashboard designed for administrative use, prov
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pos-dashboard.git
-   cd pos-dashboard
+   git clone https://github.com/MONAlIS-A/POS.git
+   cd POS
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
