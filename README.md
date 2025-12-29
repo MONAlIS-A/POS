@@ -2,7 +2,7 @@
 
 A responsive Point of Sale (POS) dashboard designed for administrative use, providing real-time insights into staff activity and order statistics.
 
-## 🖼️ Screenshot ![Website Screenshot](./admin dashboard.png)
+## 🖼️ Screenshot ![Website Screenshot](./pos_dashboard.png)
 
 ## 🚀 Features
 
